@@ -1,2 +1,18 @@
+/* line 1, /Users/Chris/Development/TheMongols/css/main.sass */
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: .5px;
+  stroke-opacity: .5; }
+
+/* line 8, /Users/Chris/Development/TheMongols/css/main.sass */
+.land {
+  fill: #222; }
+
+/* line 11, /Users/Chris/Development/TheMongols/css/main.sass */
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px; }
 
 /*# sourceMappingURL=main.css.map */
