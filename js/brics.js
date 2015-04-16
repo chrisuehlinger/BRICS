@@ -17,10 +17,9 @@ var path = d3.geo.path()
 
 var title = d3.select("#currTitle");
 
-queue()
-    .defer(d3.json, "data/world-110m.json")
-    .defer(d3.tsv, "data/brics.tsv")
-    .await(ready);
+var names = [{"id":"76","name":"Brazil"},{"id":"643","name":"Russian Federation"},{"id":"356","name":"India"},{"id":"156","name":"China"},{"id":"710","name":"South Africa"}];
+
+ready('', world, names);
 
 function ready(error, world, names) {
   var globe = {type: "Sphere"},
