@@ -5,6 +5,10 @@ var projection = d3.geo.orthographic()
     .scale(window.innerWidth > 1024 && window.innerHeight > 700 ? 450 : 300)
     .clipAngle(90);
 
+$(window).resize(function(){
+  projection.scale(window.innerWidth > 1024 && window.innerHeight > 700 ? 450 : 300);
+});
+
 var canvas = d3.select("body").append("canvas")
     .attr("width", width)
     .attr("height", height);
