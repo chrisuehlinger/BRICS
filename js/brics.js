@@ -3,6 +3,7 @@ var width = 960,
 
 var projection = d3.geo.orthographic()
     .scale(window.innerWidth > 1024 && window.innerHeight > 700 ? 450 : 300)
+    .center([0, window.innerWidth < 1024 && window.innerHeight > 700  ? 20 : 10])
     .clipAngle(90);
 
 $(window).resize(function(){
