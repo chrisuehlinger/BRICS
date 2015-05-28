@@ -2,7 +2,7 @@ var width = 960,
     height = 960;
 
 var projection = d3.geo.orthographic()
-    .scale(450)
+    .scale(window.innerWidth > 1024 && window.innerHeight > 700 ? 450 : 300)
     .clipAngle(90);
 
 var canvas = d3.select("body").append("canvas")
@@ -92,7 +92,7 @@ function ready(error, world, names) {
             c.strokeStyle = "#000", c.lineWidth = 2, c.beginPath(), path(globe), c.stroke();
   function transition(countryName) {
       var thisCountry = countries.filter(function(country){return country.name === countryName})[0];
-      console.log(thisCountry,d3.geo.centroid(thisCountry));
+      console.log(thisCountry,thisCountry ? d3.geo.centroid(thisCountry) : [0,0]);
 
     d3.transition()
         .duration(1250)
