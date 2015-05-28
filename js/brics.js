@@ -41,7 +41,7 @@ function ready(error, world, names) {
     return a.name.localeCompare(b.name);
   });
     
-    var scrollOffset = '10%';
+    var scrollOffset = '35%';
     
     new Waypoint({
       element: $('h1'),
