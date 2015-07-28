@@ -7,7 +7,7 @@ var projection = d3.geo.orthographic()
     .clipAngle(90);
 
 $(window).resize(function(){
-  projection.scale(window.innerWidth > 1024 && window.innerHeight > 700 ? 450 : 300);
+  projection.scale(window.innerWidth > 1024 && window.innerHeight > 700 ? 450 : 350);
 });
 
 var canvas = d3.select("body").append("canvas")
